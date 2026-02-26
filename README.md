@@ -14,7 +14,7 @@
 
 ## 仓库结构
 
-- `skills/sky-demand-evaluator/SKILL.md`  
+- `skill/SKILL.md`  
   - 核心 Skill 定义文件，包含：  
     - YAML frontmatter（name + description）；  
     - 使用时机（何时触发此 Skill）；  
@@ -56,7 +56,7 @@
 
 ## 何时使用这个 Skill
 
-`SKILL.md` 中列出了一些典型触发场景，简要总结如下：
+`skill/SKILL.md` 中列出了一些典型触发场景，简要总结如下：
 
 - 当有人提到**具体功能/按钮/配置**：  
   - 例：「首页应该少一些初始化弹框」「这里要多加一个筛选项」「按钮放大一点」。  
@@ -71,11 +71,11 @@
 
 ## 在 Codex 中如何使用
 
-前提：你的 Codex 环境可以识别本地 Skill，并将 `skills/sky-demand-evaluator` 所在路径加入到 Skill 搜索路径中（通常是拷贝到 `$CODEX_HOME/skills` 或在配置中指明该目录）。
+前提：你的 Codex 环境可以识别本地 Skill，并将本仓库的 `skill/` 目录加入到 Skill 搜索路径中（通常是拷贝到 `$CODEX_HOME/skills` 或在配置中指明该目录）。
 
 1. **安装 / 拷贝**  
-   - 将本仓库中的 `skills/sky-demand-evaluator` 目录拷贝到你的 Codex Skill 目录，例如：  
-     - `cp -R skills/sky-demand-evaluator ~/.codex/skills/`
+   - 将本仓库中的 `skill/` 目录拷贝到你的 Codex Skill 目录，例如：  
+     - `cp -R skill ~/.codex/skills/sky-demand-evaluator`
 
 2. **触发使用**  
    - 在对话中，你可以通过名称显式指出希望用此 Skill 协助，例如：  
@@ -113,17 +113,17 @@
     - 如埋点不足，建议新增「首页曝光」「弹窗展示/关闭」等事件。  
   - （满足条件）具体产品方案建议简要轮廓。
 
-完整、详细的结构和说明请参考 `skills/sky-demand-evaluator/SKILL.md`。
+完整、详细的结构和说明请参考 `skill/SKILL.md`。
 
 ---
 
 ## 开发和扩展建议
 
-- 如果你的团队有固定的指标体系（例如特定的漏斗定义、核心事件、业务线分类），可以基于当前 SKILL.md：  
+- 如果你的团队有固定的指标体系（例如特定的漏斗定义、核心事件、业务线分类），可以基于当前 `skill/SKILL.md`：  
   - 增加自定义的「需求类型标签」枚举；  
   - 把「价值 vs 成本」的判定规则和阈值写得更贴近你们的实践；  
   - 在「数据与埋点建议」部分补充你们的标准埋点规范。  
 - 推荐的迭代方式：  
   1. 用本 Skill 评估一批真实需求；  
   2. 总结哪些信息还经常要在对话里补充；  
-  3. 回写到 SKILL.md 的说明里，让下一次评估更顺畅。
+  3. 回写到 `skill/SKILL.md` 的说明里，让下一次评估更顺畅。
